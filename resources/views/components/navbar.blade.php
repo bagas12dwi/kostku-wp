@@ -8,7 +8,7 @@
         <div class="navbar-nav">
           <a class="nav-link active" aria-current="page" href="/">Home</a>
           <a class="nav-link" href="/temukan">Temukan</a>
-          <a class="nav-link" href="/produk">Produk</a>
+          <a class="nav-link" href="/hasil">Produk</a>
         </div>
       </div>
     </div>

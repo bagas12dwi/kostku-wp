@@ -7,7 +7,9 @@
                 <div class="col-md-6 text-light">
                     <h1>Temukan Kost Pilihan Terbaikmu</h1>
                     <h6>Masukkan beberapa informasi agar kami dapat membantu kalian untuk menemukan kost terbaik</h6>
-                    <button class="btn btn-light rounded-pill mt-3 px-5 fw-bold" type="submit">Temukan</button>
+                    <a href="/temukan" class="nav-links">
+                        <button class="btn btn-light rounded-pill mt-3 px-5 fw-bold" type="submit">Temukan</button>
+                    </a>
                 </div>
             </div>
 

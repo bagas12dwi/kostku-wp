@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\HasilController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
@@ -21,3 +22,5 @@ Route::get('/temukan', function () {
         'tittle' => 'temukan'
     ]);
 });
+
+Route::get('/hasil', [HasilController::class, 'index']);
