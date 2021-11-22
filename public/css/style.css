@@ -1,0 +1,9 @@
+body{
+    background-image: url(../assets/bg.jpg);
+    background-size: cover;
+}
+
+.landing-page {
+    min-height: 100vh;
+    margin-top: -75px;
+}
