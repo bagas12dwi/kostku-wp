@@ -27,19 +27,19 @@
               <div class="row">
                 <div class="col-md-2">
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="kasur">
+                    <input class="form-check-input" type="checkbox" value="" id="kasur" checked disabled>
                     <label class="form-check-label" for="flexCheckDefault">
                       Kasur
                     </label>
                   </div>
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="lemari">
+                    <input class="form-check-input" type="checkbox" value="" id="lemari" checked disabled>
                     <label class="form-check-label" for="flexCheckDefault">
                       Lemari
                     </label>
                   </div>
                   <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="wifi">
+                    <input class="form-check-input" type="checkbox" value="" id="wifi" checked disabled>
                     <label class="form-check-label" for="flexCheckDefault">
                       Wifi
                     </label>

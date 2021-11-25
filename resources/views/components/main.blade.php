@@ -11,7 +11,7 @@
 
     <title>CoostKu | {{ $tittle }}</title>
   </head>
-  <body>
+  <body style="margin-top: 100px">
     @include('components.navbar')
 
     @yield('konten')
