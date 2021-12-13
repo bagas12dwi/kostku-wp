@@ -17,7 +17,7 @@ class CreateKriteriaTable extends Migration
             $table->id();
             $table->timestamps();
             $table->string('kriteria');
-            $table->string('kepentingan');
+            $table->integer('kepentingan');
             $table->string('cost_benefit');
         });
     }

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\HasilController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ProductController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -23,4 +24,7 @@ Route::get('/temukan', function () {
     ]);
 });
 
+Route::post('/hasil', [HasilController::class, 'add'])->name('getHasil');
 Route::get('/hasil', [HasilController::class, 'index']);
+
+Route::get('/produk', [ProductController::class, 'index']);

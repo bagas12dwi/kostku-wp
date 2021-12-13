@@ -17,11 +17,11 @@ class CreateAlternativeTable extends Migration
             $table->id();
             $table->timestamps();
             $table->string('alternatif');
-            $table->integer('k1');
-            $table->integer('k2');
-            $table->integer('k3');
-            $table->integer('k4');
-            $table->integer('k5');
+            $table->integer('harga');
+            $table->double('jarak');
+            $table->integer('fasilitas');
+            $table->integer('luas');
+            $table->string('image');
         });
     }
 
