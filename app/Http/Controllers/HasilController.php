@@ -10,26 +10,24 @@ class HasilController extends Controller
 {
     public function add(Request $request)
     {
-        // $harga = $request->harga;
-        // $jarak = $request->jarak;
-        // $fasilitas = $request->fasilitas;
-        // $luas = $request->luas;
-        // $hasil = $harga+$jarak+$fasilitas+$luas;
+        $harga = $request->harga;
+        $jarak = $request->jarak;
+        $fasilitas = $request->fasilitas;
+        $luas = $request->luas;
+        $hasil = $harga+$jarak+$fasilitas+$luas;
 
-        // $w_harga = -($harga/$hasil);
-        // $w_jarak = -($jarak/$hasil);
-        // $w_fasilitas = $fasilitas/$hasil;
-        // $w_luas = $luas/$hasil;
+        $w_harga = -($harga/$hasil);
+        $w_jarak = -($jarak/$hasil);
+        $w_fasilitas = $fasilitas/$hasil;
+        $w_luas = $luas/$hasil;
 
-        // $list = DB::statement("CALL fun_hasil(". $w_harga .", ". $w_jarak .", ". $w_fasilitas .", ". $w_luas .")");
+        $list = DB::select("CALL fun_hasil(". $w_harga .", ". $w_jarak .", ". $w_fasilitas .", ". $w_luas .")");
 
-        dd($request);
-        return redirect()->intended("/");
 
-        // return view('hasil', [
-        //     'tittle' => 'Hasil',
-        //     'hasil' => $list
-        // ]);
+        return view('hasil', [
+            'tittle' => 'Hasil',
+            'hasil' => $list
+        ]);
 
     }
 

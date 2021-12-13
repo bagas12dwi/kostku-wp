@@ -1,10 +1,11 @@
 @extends('components/main')
 
 @section('konten')
-    <div class="container bg-light my-4 rounded" style="min-height: 80vh; padding: 30px">
+    <div class="container bg-light my-4 rounded" style="padding: 30px">
         <h2>Hasil</h2>
+        <p>4 Kost Teratas berdasarkan Prioritas anda</p>
         <div class="row">
-          @foreach ($product as $alternative)
+          @foreach ($hasil as $alternative)
             <div class="col-md-3 mb-3">
                 <div class="card" >
                     <img src="{{ URL::asset('assets/'. $alternative->image) }}" class="card-img-top">

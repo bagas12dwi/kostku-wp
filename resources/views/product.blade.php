@@ -9,7 +9,7 @@
             <div class="row">
               @foreach ($product as $alternative)
                 <div class="col-md-3 mb-3">
-                    <div class="card" >
+                    <div class="card" style="min-height: 22rem">
                         <img src="{{ URL::asset('assets/'. $alternative->image) }}" class="card-img-top">
                         <div class="card-body">
                           <h5 class="card-title">{{ $alternative->alternatif }} ({{ $alternative->luas }})</h5>
@@ -31,30 +31,29 @@
 @endsection
 
 
-<!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Filter Berdasarkan Prioritas</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <form action="/hasil" method="POST" enctype="multipart/form-data">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form action="/hasil" method="POST">
             @csrf
             <div class="mb-3">
-                <label for="customRange2" class="form-label">Harga</label>
-                <select class="form-select" aria-label="Default select example" name="harga[]">
-                  <option selected>-- Pilih Prioritas --</option>
-                  <option value="1">Sangat Penting</option>
-                  <option value="2">Penting</option>
-                  <option value="3">Kurang Penting</option>
-                  <option value="4">Tidak Penting</option>
-                </select>
+              <label for="customRange2" class="form-label">Harga</label>
+              <select class="form-select" aria-label="Default select example" name="harga">
+                <option selected>-- Pilih Prioritas --</option>
+                <option  value="1">Sangat Penting</option>
+                <option  value="2">Penting</option>
+                <option  value="3">Kurang Penting</option>
+                <option  value="4">Tidak Penting</option>
+              </select>
             </div>
             <div class="mb-3">
                 <label for="customRange2" class="form-label">Jarak</label>
-                <select class="form-select" aria-label="Default select example" name="jarak[]">
+                <select class="form-select" aria-label="Default select example" name="jarak">
                   <option selected>-- Pilih Prioritas --</option>
                   <option value="1">Sangat Penting</option>
                   <option value="2">Penting</option>
@@ -64,7 +63,7 @@
             </div>
             <div class="mb-3">
                 <label for="customRange2" class="form-label">Fasilitas</label>
-                <select class="form-select" aria-label="Default select example" name="fasilitas[]">
+                <select class="form-select" aria-label="Default select example" name="fasilitas">
                   <option selected>-- Pilih Prioritas --</option>
                   <option value="1">Sangat Penting</option>
                   <option value="2">Penting</option>
@@ -74,7 +73,7 @@
             </div>
             <div class="mb-3">
                 <label for="customRange2" class="form-label">Luas</label>
-                <select class="form-select" aria-label="Default select example" name="luas[]">
+                <select class="form-select" aria-label="Default select example" name="luas">
                   <option selected>-- Pilih Prioritas --</option>
                   <option value="1">Sangat Penting</option>
                   <option value="2">Penting</option>
@@ -82,14 +81,12 @@
                   <option value="4">Tidak Penting</option>
                 </select>
             </div>
-          </div>
-          <div class="container mb-3">
-            <button type="button" class="btn btn-primary">Save changes</button>
-          </div>
-        </form>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
       </div>
     </div>
+  </div>
 </div>
